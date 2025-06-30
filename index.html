@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KrishnaSai Kavuri - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500; /* Default to medium weight for neatness */
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+    .hover-glow:hover {
+      color: #3B82F6;
+      text-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+    .profile-img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .neat-text {
+      font-size: 1.125rem; /* 18px */
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+         <a href="#home" class="text-2xl font-semibold text-gray-900 text-center hover-glow transition neat-text">KrishnaSai Kavuri</a>
+        <div class="flex space-x-6">
+          <a href="#home" class="text-gray-600 hover-glow transition text-center neat-text">Home</a>
+          <a href="#about" class="text-gray-600 hover-glow transition text-center neat-text">About</a>
+          <a href="#education" class="text-gray-600 hover-glow transition text-center neat-text">Education</a>
+          <a href="#skills" class="text-gray-600 hover-glow transition text-center neat-text">Skills</a>
+          <a href="#projects" class="text-gray-600 hover-glow transition text-center neat-text">Projects</a>
+          <a href="#contact" class="text-gray-600 hover-glow transition text-center neat-text">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Profile Picture -->
+  <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-900 to-purple-800 text-white">
+    <div class="text-center fade-in">
+      <!-- For local testing, use the provided image path. For online deployment, replace with a hosted URL (e.g., from GitHub, ImgBB) -->
+      <img src="D:\My Portfolio\PhotoKAVURI.jpg" alt="KrishnaSai Kavuri" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg profile-img" onerror="this.src='https://via.placeholder.com/300?text=Profile+Image'">
+      <h1 class="text-5xl font-bold mb-4 text-center neat-text">Hi, I'm KrishnaSai Kavuri</h1>
+      <p class="text-xl mb-6 text-center neat-text">A passionate Full Stack Developer creating innovative solutions</p>
+      <div class="flex justify-center space-x-4">
+        <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 hover-scale transition text-center neat-text">Get in Touch</a>
+        <!-- For local testing, place your resume in a 'resume' folder as 'KrishnaSai_Full_Stack_Developer.pdf'. For online deployment, replace with a hosted URL -->
+        <a href="https://github.com/KrishnaSai987/KrishnaSai_Resume" download class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 hover-scale transition text-center neat-text">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold mb-12 text-center neat-text">About Me</h2>
+      <div class="flex flex-col items-center gap-8 fade-in">
+        <p class="text-lg mb-4 text-center neat-text">Full Stack Developer with 2.8 years of hands-on experience in building scalable web and mobile applications using Java, Spring Boot, React, and Kotlin. Proven track record of enhancing application performance by up to 40% and streamlining development workflows through CI/CD automation. Adept at thriving in Agile environments, collaborating across teams, and delivering high-quality, maintainable solutions that drive business impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold mb-12 text-center neat-text">Education</h2>
+      <div class="max-w-lg mx-auto space-y-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale fade-in">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">MS in Applied Computer Science</h3>
+          <p class="text-lg mb-2 text-center neat-text">Southeast Missouri State University</p>
+          <p class="text-lg text-center neat-text">GPA: 3.91/4.0</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale fade-in">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">BS in Electrical and Electronics Engineering</h3>
+          <p class="text-lg mb-2 text-center neat-text">K L University</p>
+          <p class="text-lg text-center neat-text">GPA: 3.25/4.0</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold mb-12 text-center neat-text">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 fade-in">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">CSS</h3>
+          <p class="text-center neat-text">Styling responsive web interfaces</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">HTML</h3>
+          <p class="text-center neat-text">Structuring web content</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">Java</h3>
+          <p class="text-center neat-text">Building robust backend systems</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">Python</h3>
+          <p class="text-center neat-text">Scripting and automation</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">Spring Boot</h3>
+          <p class="text-center neat-text">Developing scalable APIs</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">Maven</h3>
+          <p class="text-center neat-text">Managing Java project builds</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">JSON</h3>
+          <p class="text-center neat-text">Structuring data for APIs</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">C</h3>
+          <p class="text-center neat-text">Low-level system programming</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">C++</h3>
+          <p class="text-center neat-text">High-performance applications</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">Kotlin</h3>
+          <p class="text-center neat-text">Mobile application development</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">React Native</h3>
+          <p class="text-center neat-text">Building cross-platform mobile apps</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">MySQL</h3>
+          <p class="text-center neat-text">Managing relational databases</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">PostgreSQL</h3>
+          <p class="text-center neat-text">Handling advanced SQL databases</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">MongoDB</h3>
+          <p class="text-center neat-text">Working with NoSQL databases</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">NoSQL</h3>
+          <p class="text-center neat-text">Designing scalable data stores</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">GitHub</h3>
+          <p class="text-center neat-text">Version control and collaboration</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">JUnit</h3>
+          <p class="text-center neat-text">Writing unit tests for Java</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">Selenium Testing</h3>
+          <p class="text-center neat-text">Automating web application testing</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-scale">
+          <h3 class="text-xl font-semibold mb-2 text-center neat-text">Automation Testing</h3>
+          <p class="text-center neat-text">Streamlining QA processes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+   <section id="projects" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold mb-12 text-center neat-text">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-scale text-center">
+          <img src="https://via.placeholder.com/300x200" alt="Project 1" class="w-full h-48 object-cover rounded-md mb-4 mx-auto" onerror="this.src='https://via.placeholder.com/300x200?text=Project+Image'">
+          <h3 class="text-xl font-semibold mb-2 neat-text">E-Book Store Web Application</h3>
+          <p class="mb-4 neat-text">Designed and developed a comprehensive full-stack e-bookstore application by integrating Java, Spring Boot (backend), Node.js (middleware), and React.js (frontend). Built and consumed RESTful APIs to efficiently handle CRUD operations for a catalog of over 1,000 books. Implemented dynamic search, filtering, and pagination features that improved user browsing performance by 20%, resulting in a smoother and more responsive user experience.</p>
+          <a href="https://github.com/KrishnaSai987/OnlineBookstore" target="_blank" class="text-blue-500 hover-glow neat-text">View Project</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-scale text-center">
+          <img src="https://via.placeholder.com/300x200" alt="Project 2" class="w-full h-48 object-cover rounded-md mb-4 mx-auto" onerror="this.src='https://via.placeholder.com/300x200?text=Project+Image'">
+          <h3 class="text-xl font-semibold mb-2 neat-text">Pet Adoption Application</h3>
+          <p class="mb-4 neat-text">Developed a cross-platform mobile application for pet adoption using Flutter (Dart) and React Native (JavaScript), enabling seamless performance on both Android and iOS devices. Implemented features that allow users to browse adoptable pets, submit adoption applications, and communicate directly with local shelters, streamlining the pet adoption process and improving user engagement.</p>
+          <a href="https://github.com/KrishnaSai987/Adopt-a-Dog" target="_blank" class="text-blue-500 hover-glow neat-text">View Project</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover-scale text-center">
+          <img src="https://via.placeholder.com/300x200" alt="Project 3" class="w-full h-48 object-cover rounded-md mb-4 mx-auto" onerror="this.src='https://via.placeholder.com/300x200?text=Project+Image'">
+          <h3 class="text-xl font-semibold mb-2 neat-text">Student Management System</h3>
+          <p class="mb-4 neat-text">Built a full-stack Student Management System using Node.js, Express.js, React, JavaScript, and MongoDB. The application enables administrators to manage student records, including enrollment, performance tracking, and course assignments. Designed intuitive user interfaces and implemented RESTful APIs for efficient data handling and real-time updates, enhancing administrative efficiency and data accessibility.</p>
+          <a href="https://github.com/KrishnaSai987/Student-Management-System" target="_blank" class="text-blue-500 hover-glow neat-text">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold mb-12 text-center neat-text">Get in Touch</h2>
+      <div class="max-w-lg mx-auto fade-in text-center">
+        <p class="text-lg mb-6 neat-text">I’m currently seeking full-time opportunities as a Java Backend or Full Stack Developer (Fulltime/W2/C2C). Please feel free to reach out if you have any suitable openings or opportunities to collaborate.</p>
+        <div class="flex justify-center space-x-6">
+          <a href="mailto:sukavuri5566@gmail.com" class="text-blue-500 hover-glow neat-text">Email</a>
+          <a href="https://github.com/KrishnaSai987" class="text-blue-500 hover-glow neat-text">GitHub</a>
+          <a href="https://www.linkedin.com/in/krishnasaikavuri/" class="text-blue-500 hover-glow neat-text">LinkedIn</a>
+          <a href="https://your-portfolio.com" class="text-blue-500 hover-glow neat-text">Portfolio</a>
+          <!-- For local testing, place your resume in a 'resume' folder as 'KrishnaSai_Full_Stack_Developer.pdf'. For online deployment, replace with a hosted URL -->
+          <a href="https://github.com/KrishnaSai987/KrishnaSai_Resume" download class="text-blue-500 hover-glow neat-text">Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-600 neat-text">© 2025 Krishna Sai Kavuri. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(element => observer.observe(element));
+  </script>
+</body>
+</html>
