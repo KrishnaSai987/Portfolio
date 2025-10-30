@@ -338,36 +338,36 @@
         }
 
         /* Component Overlay Styles */
-        /* Component Overlay Styles */
-.component-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--white);
-    z-index: 100;
-    overflow-y: auto; /* Changed from hidden to auto */
-    padding-top: 100px;
-    transition: all 0.3s ease;
-}
+        .component-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--white);
+            z-index: 100;
+            overflow-y: auto;
+            padding-top: 100px;
+            transition: all 0.3s ease;
+        }
 
-body.dark-mode .component-overlay {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-}
+        body.dark-mode .component-overlay {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
 
-.component-overlay.active {
-    display: block;
-}
+        .component-overlay.active {
+            display: block;
+        }
 
-.component-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px 40px;
-    overflow: visible; /* Ensure content can flow */
-}
+        .component-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            overflow: visible;
+        }
+
         /* Component Headers */
         .component-header {
             text-align: center;
@@ -631,8 +631,100 @@ body.dark-mode .component-overlay {
             resize: vertical;
         }
 
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .mobile-menu-btn {
+            color: var(--dark-text);
+        }
+
+        .mobile-menu-btn:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .mobile-menu-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--white);
+            z-index: 2000;
+            padding-top: 100px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .mobile-menu-overlay {
+            background-color: var(--dark-bg);
+        }
+
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        body.dark-mode .mobile-menu-close {
+            color: var(--dark-text);
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 30px;
+        }
+
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .mobile-nav-links a {
+            color: var(--dark-text);
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
         /* Responsive Styles */
         @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
             .nav-links {
                 display: none;
             }
@@ -674,232 +766,247 @@ body.dark-mode .component-overlay {
                 height: 220px;
             }
         }
+
         /* Force readable text in dark mode for About section */
-body.dark-mode #about * {
-  color: #e0e0e0 !important;
-  background-color: transparent !important;
-}
+        body.dark-mode #about * {
+            color: #e0e0e0 !important;
+            background-color: transparent !important;
+        }
 
-body.dark-mode #about a {
-  color: #4dabf7 !important;
-}
+        body.dark-mode #about a {
+            color: #4dabf7 !important;
+        }
 
-body.dark-mode #about i {
-  color: #4dabf7 !important;
-}
-/* Better contrast for About section in dark mode */
-body.dark-mode #about {
-  background-color: var(--dark-bg);
-}
+        body.dark-mode #about i {
+            color: #4dabf7 !important;
+        }
 
-body.dark-mode #about .component-content > div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
+        /* Better contrast for About section in dark mode */
+        body.dark-mode #about {
+            background-color: var(--dark-bg);
+        }
 
-/* Profile + Connect cards */
-body.dark-mode #about div[style*="box-shadow"] {
-  background-color: #2d2d2d !important;
-  color: #e0e0e0 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
-  border-left: 4px solid var(--secondary-color);
-}
+        body.dark-mode #about .component-content > div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
 
-/* Profile card name + icons */
-body.dark-mode #about h3 {
-  color: #4dabf7 !important;
-}
+        /* Profile + Connect cards */
+        body.dark-mode #about div[style*="box-shadow"] {
+            background-color: #2d2d2d !important;
+            color: #e0e0e0 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+            border-left: 4px solid var(--secondary-color);
+        }
 
-body.dark-mode #about a {
-  color: #4dabf7 !important;
-}
+        /* Profile card name + icons */
+        body.dark-mode #about h3 {
+            color: #4dabf7 !important;
+        }
 
-/* About text section (right column) */
-body.dark-mode #about div[style*="line-height"] {
-  background-color: #242424 !important;
-  color: #e0e0e0 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
-  border-left: 4px solid #4dabf7;
-}
+        body.dark-mode #about a {
+            color: #4dabf7 !important;
+        }
 
-/* Make paragraphs more readable */
-body.dark-mode #about p {
-  color: #e0e0e0 !important;
-  line-height: 1.7;
-}
+        /* About text section (right column) */
+        body.dark-mode #about div[style*="line-height"] {
+            background-color: #242424 !important;
+            color: #e0e0e0 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+            border-left: 4px solid #4dabf7;
+        }
 
-/* Accent color for icons */
-body.dark-mode #about i {
-  color: #4dabf7 !important;
-}
+        /* Make paragraphs more readable */
+        body.dark-mode #about p {
+            color: #e0e0e0 !important;
+            line-height: 1.7;
+        }
 
-
+        /* Accent color for icons */
+        body.dark-mode #about i {
+            color: #4dabf7 !important;
+        }
     </style>
 </head>
 <body>
     <!-- Header - Now Fixed -->
-<header>
-    <div class="container">
-        <nav>
-            <a href="#" class="logo" id="home-logo">
-                <div class="logo-circle">KS</div>
-            </a>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#" class="nav-link" data-target="about">About</a></li>
-                    <li><a href="#" class="nav-link" data-target="skills">Skills</a></li>
-                    <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
-                    <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
-                </ul>
-                <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </nav>
-    </div>
-</header>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo" id="home-logo">
+                    <div class="logo-circle">KS</div>
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="#" class="nav-link" data-target="about">About</a></li>
+                        <li><a href="#" class="nav-link" data-target="skills">Skills</a></li>
+                        <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
+                        <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" title="Open menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="main-content" id="main-content">
-        <div class="hero">
-            <h1>Hello World!</h1>
-            <p style="font-size: 2rem; margin-bottom: 5px;">I am KrishnaSai Kavuri</p>
-            
-            <!-- Typewriter Text Section -->
-            <div class="typewriter-container" style="height: 2.0rem; margin: 10px 0 20px; position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
-                <div id="typewriter-text" style="font-size: 1.4rem; color: var(--secondary-color); font-weight: 600; text-align: center; min-height: 2.5rem; display: flex; align-items: center; justify-content: center;"></div>
-            </div>
-            
-            <div style="margin-top: 15px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                <div style="text-align: center; font-size: 1.1rem; margin-bottom: 5px;">
-                    <span>Know more </span>
-                    <a href="#" class="nav-link" data-target="about" style="color: var(--secondary-color); text-decoration: none; font-weight: 600; border-bottom: 2px solid var(--secondary-color); padding-bottom: 2px;">
-                        about me
-                    </a>
-                    <span> and </span>
-                    <a href="#" class="nav-link" data-target="projects" style="color: var(--secondary-color); text-decoration: none; font-weight: 600; border-bottom: 2px solid var(--secondary-color); padding-bottom: 2px;">
-                        my work
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-menu-close">&times;</button>
+        <ul class="mobile-nav-links">
+            <li><a href="#" class="nav-link" data-target="about">About</a></li>
+            <li><a href="#" class="nav-link" data-target="skills">Skills</a></li>
+            <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
+            <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content" id="main-content">
+            <div class="hero">
+                <h1>Hello World!</h1>
+                <p style="font-size: 2rem; margin-bottom: 5px;">I am KrishnaSai Kavuri</p>
+                
+                <!-- Typewriter Text Section -->
+                <div class="typewriter-container" style="height: 2.0rem; margin: 10px 0 20px; position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
+                    <div id="typewriter-text" style="font-size: 1.4rem; color: var(--secondary-color); font-weight: 600; text-align: center; min-height: 2.5rem; display: flex; align-items: center; justify-content: center;"></div>
+                </div>
+                
+                <div style="margin-top: 15px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                    <div style="text-align: center; font-size: 1.1rem; margin-bottom: 5px;">
+                        <span>Know more </span>
+                        <a href="#" class="nav-link" data-target="about" style="color: var(--secondary-color); text-decoration: none; font-weight: 600; border-bottom: 2px solid var(--secondary-color); padding-bottom: 2px;">
+                            about me
+                        </a>
+                        <span> and </span>
+                        <a href="#" class="nav-link" data-target="projects" style="color: var(--secondary-color); text-decoration: none; font-weight: 600; border-bottom: 2px solid var(--secondary-color); padding-bottom: 2px;">
+                            my work
+                        </a>
+                    </div>
+                    <a href="https://github.com/KrishnaSai987/Portfolio/blob/main/KrishnaSai_Full_Stack_Developer.pdf" class="btn btn-outline" target="_blank">
+                        View My Resume
                     </a>
                 </div>
-                <a href="https://github.com/KrishnaSai987/Portfolio/blob/main/KrishnaSai_Full_Stack_Developer.pdf" class="btn btn-outline" target="_blank">
-                    View My Resume
-                </a>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Footer -->
-<footer id="footer">
-    <div class="container">
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/krishnasaikavuri/" class="social-link" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/KrishnaSai987" class="social-link" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:saikavuri5566@gmail.com" class="social-link">
-                <i class="fas fa-envelope"></i>
-            </a>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/krishnasaikavuri/" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/KrishnaSai987" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:saikavuri5566@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 KrishnaSai Kavuri. All Rights Reserved.</p>
+            </div>
         </div>
-        <div class="copyright">
-            <p>© 2025 KrishnaSai Kavuri. All Rights Reserved.</p>
+    </footer>
+
+    <!-- About Component Overlay -->
+    <div id="about" class="component-overlay">
+        <button class="close-btn">&times;</button>
+        <div class="component-content">
+            <div class="component-header">
+                <h2>About <span style="color: #0391e9;">Me</span></h2>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
+
+                <!-- Left Column -->
+                <div style="flex: 1; min-width: 250px; max-width: 280px; display: flex; flex-direction: column; gap: 25px;">
+
+                    <!-- Profile Card -->
+                    <div style="background: var(--white); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 10px; text-align: center; padding: 25px; position: relative;">
+                        
+                        <!-- Profile Image -->
+                        <img src="https://raw.githubusercontent.com/KrishnaSai987/Portfolio/main/MyPhotoKavuri.png"
+                            alt="Krishnasai Kavuri"
+                            style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-top: 25px; margin-bottom: 15px;">
+
+                        <h3 style="margin-bottom: 8px; color: var(--primary-color);">Krishnasai Kavuri</h3>
+                        <p style="color: #555;">M.S, Computer Science</p>
+                        <p style="color: #888;">Southeast Missouri State University</p>
+                        <p style="color: #555; margin-top: 8px;"><i class="fas fa-map-marker-alt" style="color:#0391e9;"></i> St. Louis, MO</p>
+
+                        <div style="margin-top: 15px;">
+                            <a href="mailto:saikavuri5566@gmail.com" style="margin: 0 8px; text-decoration: none; color: var(--text-color);">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://github.com/KrishnaSai987" target="_blank" style="margin: 0 8px; text-decoration: none; color: var(--text-color);">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/krishnasaikavuri" target="_blank" style="margin: 0 8px; text-decoration: none; color: var(--text-color);">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Connect Card -->
+                    <div style="background: var(--white); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 10px; padding: 20px; text-align: center;">
+                        <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: var(--primary-color);">Connect</h3>
+                        <p style="margin-bottom: 10px;">
+                            <a href="mailto:saikavuri5566@gmail.com" style="text-decoration: none; color: #0391e9; font-weight: 600;">
+                                <i class="fas fa-envelope"></i> Email Me
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- About Text -->
+                <div style="flex: 2; min-width: 300px; background: var(--white); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 10px; padding: 25px; line-height: 1.7; overflow: visible;">
+                    <p style="margin-bottom: 15px;">Hey there! 👋 Thanks for stopping by!</p>
+
+                    <p style="margin-bottom: 15px;">
+                        I'm Krishnasai Kavuri, a Full Stack Software Engineer with over 
+                        3 years of experience designing, building, and scaling large-scale web applications. 
+                        I'm passionate about transforming complex challenges into seamless, high-performance solutions that make an impact.
+                    </p>
+
+                    <p style="margin-bottom: 15px;">
+                        I hold my Master's in Computer Science at 
+                        Southeast Missouri State University. I'm diving deeper into 
+                        cloud computing, AI, and distributed systems — all while staying hands-on with 
+                        modern tech stacks like React, Spring Boot, Node.js, and AWS.
+                    </p>
+
+                    <p style="margin-bottom: 15px;">
+                        Before grad school, I worked as a Programmer Analyst at Cognizant, where I contributed to 
+                        backend systems powering Google Bard, improving response times and supporting millions of users daily. 
+                        From optimizing RESTful APIs to deploying cloud-native solutions on AWS and Azure, I love building software that scales.
+                    </p>
+
+                    <p style="margin-bottom: 15px;">
+                        I'm also an AWS Certified Solutions Architect and Microsoft Azure AI Essentials professional — 
+                        constantly learning, experimenting, and pushing the limits of what technology can achieve.
+                    </p>
+
+                    <p style="margin-bottom: 15px;">
+                        Whether it's architecting full-stack systems, deploying ML-driven applications, or mentoring teams through 
+                        Agile delivery, I bring enthusiasm and precision to every project.
+                    </p>
+
+                    <p style="font-weight: 600; margin-top: 15px;">Let's connect and build something awesome together! 🚀</p>
+                    
+                </div>
+            </div>
         </div>
     </div>
-</footer>
-
-<!-- About Component Overlay -->
-<div id="about" class="component-overlay">
-  <button class="close-btn">&times;</button>
-  <div class="component-content">
-    <div class="component-header">
-      <h2>About <span style="color: #0391e9;">Me</span></h2>
-    </div>
-
-    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px;">
-
-      <!-- Left Column -->
-      <div style="flex: 1; min-width: 250px; max-width: 280px; display: flex; flex-direction: column; gap: 25px;">
-
-        <!-- Profile Card -->
-        <div style="background: var(--white); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 10px; text-align: center; padding: 25px; position: relative;">
-          
-          <!-- Profile Image -->
-          <img src="https://raw.githubusercontent.com/KrishnaSai987/Portfolio/main/MyPhotoKavuri.png"
-              alt="Krishnasai Kavuri"
-              style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-top: 25px; margin-bottom: 15px;">
-
-          <h3 style="margin-bottom: 8px; color: var(--primary-color);">Krishnasai Kavuri</h3>
-          <p style="color: #555;">M.S, Computer Science</p>
-          <p style="color: #888;">Southeast Missouri State University</p>
-          <p style="color: #555; margin-top: 8px;"><i class="fas fa-map-marker-alt" style="color:#0391e9;"></i> St. Louis, MO</p>
-
-          <div style="margin-top: 15px;">
-            <a href="mailto:saikavuri5566@gmail.com" style="margin: 0 8px; text-decoration: none; color: var(--text-color);">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/KrishnaSai987" target="_blank" style="margin: 0 8px; text-decoration: none; color: var(--text-color);">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/krishnasaikavuri" target="_blank" style="margin: 0 8px; text-decoration: none; color: var(--text-color);">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Connect Card -->
-        <div style="background: var(--white); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 10px; padding: 20px; text-align: center;">
-          <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: var(--primary-color);">Connect</h3>
-          <p style="margin-bottom: 10px;">
-            <a href="mailto:saikavuri5566@gmail.com" style="text-decoration: none; color: #0391e9; font-weight: 600;">
-              <i class="fas fa-envelope"></i> Email Me
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <!-- About Text -->
-      <div style="flex: 2; min-width: 300px; background: var(--white); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 10px; padding: 25px; line-height: 1.7; overflow: visible;">
-        <p style="margin-bottom: 15px;">Hey there! 👋 Thanks for stopping by!</p>
-
-        <p style="margin-bottom: 15px;">
-          I'm Krishnasai Kavuri, a Full Stack Software Engineer with over 
-          3 years of experience designing, building, and scaling large-scale web applications. 
-          I'm passionate about transforming complex challenges into seamless, high-performance solutions that make an impact.
-        </p>
-
-        <p style="margin-bottom: 15px;">
-          I hold my Master's in Computer Science at 
-          Southeast Missouri State University. I'm diving deeper into 
-          cloud computing, AI, and distributed systems — all while staying hands-on with 
-          modern tech stacks like React, Spring Boot, Node.js, and AWS.
-        </p>
-
-        <p style="margin-bottom: 15px;">
-          Before grad school, I worked as a Programmer Analyst at Cognizant, where I contributed to 
-          backend systems powering Google Bard, improving response times and supporting millions of users daily. 
-          From optimizing RESTful APIs to deploying cloud-native solutions on AWS and Azure, I love building software that scales.
-        </p>
-
-        <p style="margin-bottom: 15px;">
-          I'm also an AWS Certified Solutions Architect and Microsoft Azure AI Essentials professional — 
-          constantly learning, experimenting, and pushing the limits of what technology can achieve.
-        </p>
-
-        <p style="margin-bottom: 15px;">
-          Whether it's architecting full-stack systems, deploying ML-driven applications, or mentoring teams through 
-          Agile delivery, I bring enthusiasm and precision to every project.
-        </p>
-
-        <p style="font-weight: 600; margin-top: 15px;">Let's connect and build something awesome together! 🚀</p>
-        
-      </div>
-    </div>
-  </div>
-</div>
 
     <!-- Skills Component Overlay -->
     <div id="skills" class="component-overlay">
@@ -988,94 +1095,86 @@ body.dark-mode #about i {
             </div>
         </div>
     </div>
-<!-- Projects Component Overlay -->
-<div id="projects" class="component-overlay">
-    <button class="close-btn">&times;</button>
-    <div class="component-content">
-        <div class="component-header">
-            <h2>My Projects</h2>
-        </div>
-        
-        <div class="projects-grid" id="projects-container">
-            <!-- Student Management System -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-graduation-cap" style="font-size: 3rem;"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Student Management System</h3>
-                    <p>A comprehensive role-based management system with Admin, Teacher, and Student modules featuring secure authentication, course management, grade tracking, and attendance system.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">JWT</span>
+
+    <!-- Projects Component Overlay -->
+    <div id="projects" class="component-overlay">
+        <button class="close-btn">&times;</button>
+        <div class="component-content">
+            <div class="component-header">
+                <h2>My Projects</h2>
+            </div>
+            
+            <div class="projects-grid" id="projects-container">
+                <!-- Student Management System -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Student Management System</h3>
+                        <p>A comprehensive role-based management system with Admin, Teacher, and Student modules featuring secure authentication, course management, grade tracking, and attendance system.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/KrishnaSai987/Student-Management-System" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/KrishnaSai987/Student-Management-System" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
+                </div>
+                
+                <!-- Online Bookstore -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Online Bookstore</h3>
+                        <p>Full-stack e-commerce application for book shopping with user authentication, shopping cart, order management, and payment integration. Features book search, reviews, and recommendations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring MVC</span>
+                            <span class="tech-tag">Hibernate</span>
+                            <span class="tech-tag">JSP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/KrishnaSai987/OnlineBookstore" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Adopt a Dog -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Adopt a Dog</h3>
+                        <p>A web application connecting potential pet owners with rescue organizations. Features dog listings, search filters, adoption application forms, and shelter management system.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/KrishnaSai987/Adopt-a-Dog" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Online Bookstore -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-book" style="font-size: 3rem;"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Online Bookstore</h3>
-                    <p>Full-stack e-commerce application for book shopping with user authentication, shopping cart, order management, and payment integration. Features book search, reviews, and recommendations.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Spring MVC</span>
-                        <span class="tech-tag">Hibernate</span>
-                        <span class="tech-tag">JSP</span>
-                        <span class="tech-tag">MySQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/KrishnaSai987/OnlineBookstore" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/KrishnaSai987" class="btn" target="_blank">
+                    <i class="fab fa-github"></i> View All Projects on GitHub
+                </a>
             </div>
-            
-            <!-- Adopt a Dog -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-dog" style="font-size: 3rem;"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Adopt a Dog</h3>
-                    <p>A web application connecting potential pet owners with rescue organizations. Features dog listings, search filters, adoption application forms, and shelter management system.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">MySQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/KrishnaSai987/Adopt-a-Dog" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="github-section">
-            <a href="https://github.com/KrishnaSai987" class="github-btn" target="_blank">
-                <i class="fab fa-github"></i> View All Projects on GitHub
-            </a>
         </div>
     </div>
-</div>
 
-       <!-- Contact Component Overlay -->
+    <!-- Contact Component Overlay -->
     <div id="contact" class="component-overlay">
         <button class="close-btn">&times;</button>
         <div class="component-content">
@@ -1083,51 +1182,48 @@ body.dark-mode #about i {
                 <h2>Get In Touch</h2>
                 <p>Feel free to reach out for collaborations or just a friendly hello</p>
             </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                    
-                    <!-- Social Media Logos Below Form -->
-                    <div style="margin-top: 30px; text-align: center;">
-                        <div style="margin-bottom: 15px;">
-                            <p style="color: #666; font-size: 0.9rem; margin-bottom: 10px;">Connect with me</p>
-                        </div>
-                        <div class="social-links" style="justify-content: center; gap: 25px;">
-                            <a href="https://www.linkedin.com/in/krishnasaikavuri/" class="social-link" target="_blank" style="color: var(--secondary-color); font-size: 1.8rem;">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/KrishnaSai987" class="social-link" target="_blank" style="color: var(--secondary-color); font-size: 1.8rem;">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="mailto:saikavuri5566@gmail.com" class="social-link" style="color: var(--secondary-color); font-size: 1.8rem;">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
                     </div>
-                    
-                    <!-- Simple Footer -->
-                    <div style="margin-top: 30px; text-align: center; padding-top: 20px; border-top: 1px solid #eee;">
-                        <p style="color: #666; font-size: 0.9rem;">© 2025 KrishnaSai Kavuri. All Rights Reserved.</p>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
                     </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                
+                <!-- Social Media Logos Below Form -->
+                <div style="margin-top: 30px; text-align: center;">
+                    <div style="margin-bottom: 15px;">
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 10px;">Connect with me</p>
+                    </div>
+                    <div class="social-links" style="justify-content: center; gap: 25px;">
+                        <a href="https://www.linkedin.com/in/krishnasaikavuri/" class="social-link" target="_blank" style="color: var(--secondary-color); font-size: 1.8rem;">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/KrishnaSai987" class="social-link" target="_blank" style="color: var(--secondary-color); font-size: 1.8rem;">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:saikavuri5566@gmail.com" class="social-link" style="color: var(--secondary-color); font-size: 1.8rem;">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Simple Footer -->
+                <div style="margin-top: 30px; text-align: center; padding-top: 20px; border-top: 1px solid #eee;">
+                    <p style="color: #666; font-size: 0.9rem;">© 2025 KrishnaSai Kavuri. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </div>
-            
-          
 
     <script>
         // Typewriter Effect
@@ -1307,6 +1403,58 @@ body.dark-mode #about i {
                 document.querySelectorAll('.nav-link').forEach(navLink => {
                     navLink.classList.remove('active');
                 });
+            }
+        });
+
+        // Mobile Menu Functionality - FIX ADDED HERE
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links .nav-link');
+
+        // Open mobile menu
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+        });
+
+        // Close mobile menu
+        mobileMenuClose.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close mobile menu when clicking on links
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                
+                // Hide mobile menu
+                mobileMenu.classList.remove('active');
+                
+                // Hide main content
+                hideMainContent();
+                
+                // Hide current component if exists
+                if (currentComponent) {
+                    document.getElementById(currentComponent).classList.remove('active');
+                }
+                
+                // Show target component
+                document.getElementById(targetId).classList.add('active');
+                currentComponent = targetId;
+                
+                // Update active state in navigation
+                document.querySelectorAll('.nav-link').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('active');
             }
         });
     </script>
