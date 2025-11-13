@@ -827,6 +827,19 @@
         body.dark-mode #about i {
             color: #4dabf7 !important;
         }
+        .projects-row {
+  display: flex;
+  gap: 30px; /* controls space between cards */
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .projects-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -1478,6 +1491,7 @@
     </script>
 </body>
 </html>
+
 
 
 
